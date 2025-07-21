@@ -5,10 +5,12 @@ from transformers import pipeline
 
 
 app = Flask(__name__)
+print("init")
 clf = pipeline(
     task = 'sentiment-analysis', 
     model = 'SkolkovoInstitute/russian_toxicity_classifier'
 )
+print("init done")
 
 @app.route('/generate', methods=['POST'])
 def generate():
