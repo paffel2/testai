@@ -56,8 +56,8 @@ class Network(nn.Module):
         self.fc1 = nn.Linear(24*10*10, 10)
 
     def forward(self, input):
-        output = F.relu(self.bn1(self.conv1(input)))      
-        output = F.relu(self.bn2(self.conv2(output)))     
+        output = F. relu(self.bn1(self.conv1(input)))      
+        output = F.relu (self.bn2(self.conv2(output)))     
         output = self.pool(output)                        
         output = F.relu(self.bn4(self.conv4(output)))     
         output = F.relu(self.bn5(self.conv5(output)))     
